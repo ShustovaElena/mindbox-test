@@ -3,10 +3,10 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import React from "react";
 import { ITask } from "../../types";
 
-export const Task = (props: ITask) => {
+export const Task = ({ label }: ITask) => {
     return (
         <FormGroup>
-            <FormControlLabel control={<Checkbox icon={<CheckCircleOutlineIcon />} checkedIcon={<CheckCircleOutlineIcon />}/>} label={props.label} />
+            <FormControlLabel control={<Checkbox icon={<CheckCircleOutlineIcon />} checkedIcon={<CheckCircleOutlineIcon />}/>} label={label} />
         </FormGroup>
     );
 };
