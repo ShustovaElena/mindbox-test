@@ -1,16 +1,16 @@
 import React from 'react';
 import './App.css';
-import { Input } from './components/Input';
-import { Task } from './components/Task';
+import { InputField } from './components/Input';
 import { ButtonGroup } from './components/ButtonGroup';
+import { TaskGroup } from './components/TaskGroup';
 
 function App() {
   return (
     <>
         <h1 className="header">TODOS</h1>
-        <Input />
+        <InputField />
         <ButtonGroup />
-        <Task label={'Сделать тестовое'}/>
+        <TaskGroup />
     </>
   );
 }
