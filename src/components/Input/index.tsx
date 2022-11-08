@@ -14,11 +14,13 @@ export const InputField = () => {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         dispatch(addTask({label: text, isDone: false}));
         event.preventDefault();
+        setText('');
+        
     }
 
     return (
         <form onSubmit={handleSubmit}>
-            <TextField id="input" label="What needs to be done?" variant="outlined" fullWidth onChange={handleChange}/>
+            <TextField id="input" value={text} label="What needs to be done?" variant="outlined" fullWidth onChange={handleChange}/>
         </form>
     );
 };
