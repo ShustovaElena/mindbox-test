@@ -23,10 +23,18 @@ export const tasksSlice = createSlice({
     addTask: (state, action: PayloadAction<ITask>) => {
       state.tasks = [...state.tasks, action.payload];
     },
+    changeIsDone: (state, action: PayloadAction<ITask>) => {
+      state.tasks = state.tasks.map(item => {
+        if (item.label === action.payload.label) {
+            item.isDone = action.payload.isDone;
+        }
+        return item;
+      });
+    },
   },
 })
 
-export const { addTask } = tasksSlice.actions;
+export const { addTask, changeIsDone } = tasksSlice.actions;
 
 export const selectCount = (state: RootState) => state.tasks;
 
