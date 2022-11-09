@@ -6,7 +6,3 @@ export type ITask = {
 export type IButtonType= {
     text: string,
 }
-
-export type IItemsCount= {
-    countItems: number,
-}
