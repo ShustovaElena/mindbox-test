@@ -7,7 +7,7 @@ import './index.css';
 export const ButtonGroup = () => {
     return (
         <div className="button-group">
-            <ItemsCount countItems={2}/>
+            <ItemsCount />
             <div>
                 <ButtonType text="All" />
                 <ButtonType text="Active" />
